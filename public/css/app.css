@@ -46,10 +46,6 @@ a.nav-link:hover {
     width: 18rem;
 }
 
-.col {
-    border: 1px solid  green;
-}
-
 .col-h {
     height: 100%;
     max-height: 400px;
