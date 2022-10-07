@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid green; */
+}
+
+/*
+$font-nabla: 'Nabla', cursive;
+$font-nunito: 'Nunito', sans-serif;
+$font-robotoSlab: 'Nunito', sans-serif;
+*/
+
+.navbar {
+    background: #525252;
+}
+
+a {
+    text-decoration: none;
+    color: #ddd;
+    transition: all .23s ease-in-out;
+}
+
+a.nav-link.active {
+    color: #ffe24d !important;   
+}
+a.nav-link:hover {
+    color: #ffe24d;
+}
+
+.ff-nabla {
+    font-family: 'Nabla', cursive;
+}
+.ff-nunito {
+    font-family: 'Nunito', sans-serif;
+}
+.ff-roboto {
+    font-family: 'Nabla', cursive;
+}
+
+.main-text {
+    font-size: 6rem;
+}
+
+.card {
+    width: 18rem;
+}
+
+.col {
+    border: 1px solid  green;
+}
+
+.col-h {
+    height: 100%;
+    max-height: 400px;
+}
+
+ul {
+    list-style: none;
+}
+
+.image-block, .text-block {z-index: 2;}
+
+.element-one {
+    background-color: #525252;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    left: 60%;
+    top: 2%;
+    opacity: .1;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.element-two {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background: #ffe24d;
+    top: 2.7%;
+    left: 2rem;
+    border-radius: 50%;
+}
+
+.frame2 {
+    top: 3rem;
+    right: -2rem;
+    animation: upDown 4.8s infinite ease-in-out;
+}
+
+@keyframes upDown {
+    0% {
+        top: 1.5rem;
+    }
+    50% {
+        top: 4rem;
+    }
+    100% {
+        top: 1.5rem;
+    }
+}
+
+.svg-group {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.svg-item {
+    width: 160px;
+    position: absolute;
+    opacity: .09;
+    filter: grayscale(100%);
+    animation: shrinkGrow 3s infinite ease-in;
+}
+
+@keyframes shrinkGrow {
+    0% {
+        transform: scale(.81);
+    }
+    50% {
+        transform: scale(.9);
+    }
+    100% {
+        transform: scale(.81);
+    }
+}
+
+.item-1 {top: 2rem; right: 2rem;}
+.item-2 {left: 12%; top: 12%; }
+.item-3 {right: 24rem; bottom: 1.2rem;}
+.item-4 {top: 49%; left: 36%; rotate: 45deg;}
+.item-5 {bottom: 15%; opacity: .25;}
+.item-6 {top: 18%; left: 48%;}
+.item-7 {top: 35%; left: 15%;}
+
+
+.card:hover {
+    transition: all .35s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    scale: 1.05;
+}
+
+.how-it-works {
+    transition: all .23s ease-in;
+}
+
+.cont-desc {
+    /* padding-inline: 18rem; */
+    max-width: 720px;
+}
+
+img.faq-img {
+    max-width: 100%;
+    max-height: 480px;
+    object-fit: scale-down;
+}
+
+.footer {
+    background-color: #525252;
+}
+
+.copyright {
+    background-color: #000;
+}
+
+.footer-links a:hover {
+    color: yellow;
+}
+ul.footer-links {
+    // This is important because has 'ul & ol' have padding left 2rem in bootstrap;
+    padding-left: unset !important;
+}
+.footer-links li {
+    margin-bottom: 10px;
+}
