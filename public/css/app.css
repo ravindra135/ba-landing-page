@@ -84,6 +84,9 @@ ul {
     max-width: 100%;
     object-fit: contain;
 }
+section .container .col {
+    z-index: 5;
+}
 .cont-head {
     font-family: var(--ff-robotoSlab);
     position: relative;
@@ -224,7 +227,7 @@ span#typed_head{
     font-weight: 700;
 }
 .card:hover {
-    background-color: rgb(254, 254, 254);
+    background-color: rgb(248, 249, 250);
     transition: all .35s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     scale: 1.05;
@@ -236,12 +239,24 @@ span#typed_head{
     fill: #ffe24d;
     stroke: #ffe24d;
 }
+
+/* Section: Gather Your Squad */
+
+section#refer_a_friend img.bg-img {
+    bottom: 0;
+    opacity: .15;
+}
+
+
+section#refer_a_friend .img-container img {
+    max-width: 100%;
+    max-height: 340px;
+    object-fit: contain;
+}
+
 /* Section: How it Works */
 .how-it-works {
     transition: all .23s ease-in;
-}
-.how-it-works .col {
-    z-index: 5;
 }
 .how-it-works .col img {
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
