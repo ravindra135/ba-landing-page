@@ -25,6 +25,7 @@ a {
     text-decoration: none;
     color: #ddd;
     transition: all .23s ease-in-out;
+    position: relative;
 }
 
 a.nav-link.active {
@@ -33,7 +34,17 @@ a.nav-link.active {
 a.nav-link:hover {
     color: #ffe24d;
 }
+a.nav-link.active::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #ffe24d;
+    bottom: -5px;
+    right: 45%;
 
+}
 .ff-nabla {
     font-family: 'Nabla', cursive;
 }
@@ -41,7 +52,7 @@ a.nav-link:hover {
     font-family: 'Nunito', sans-serif;
 }
 .ff-roboto {
-    font-family: 'Nabla', cursive;
+    font-family: 'Roboto Slab', serif;
 }
 
 .main-text {
@@ -59,6 +70,49 @@ a.nav-link:hover {
 
 ul {
     list-style: none;
+}
+
+.btn {
+    font-family: var(--ff-robotoSlab);
+    font-size: 18px;
+}
+
+.bg-img {
+    position: absolute;
+    opacity: .23;
+    z-index: 1;
+    max-width: 100%;
+    object-fit: contain;
+}
+.cont-head {
+    font-family: var(--ff-robotoSlab);
+    position: relative;
+}
+.cont-desc {
+    /* padding-inline: 18rem; */
+    font-family: var(--ff-nunito);
+    max-width: 720px;
+}
+
+/* Section Header */
+.nav-item {
+    transition: all .23s ease-in-out;
+    margin-left: 3rem;
+    position: relative;
+}
+li.nav-item:hover {
+    scale: 1.04;
+}
+li.nav-item:hover::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ffe24d;
+    position: absolute;
+    border: 5px solid transparent;
+    bottom: -5px;
+    right: 45%;
 }
 
 /* Section Hero */
@@ -79,6 +133,11 @@ section#hero{
     filter: blur(3px);
     z-index: -2;
 }
+
+span#typed_head{
+    font-size: 1.7rem;
+}
+
 .image-block, .text-block {z-index: 2;}
 
 .element-one {
@@ -159,59 +218,53 @@ section#hero{
 .item-7 {top: 35%; left: 15%;}
 
 
+/* Section: Cards */
+.card h4.text-muted {
+    font-family: var(--ff-robotoSlab);
+    font-weight: 700;
+}
 .card:hover {
+    background-color: rgb(254, 254, 254);
     transition: all .35s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     scale: 1.05;
 }
-
+.card:hover h4.text-muted {
+    color: #000 !important;
+}
+.card:hover svg {
+    fill: #ffe24d;
+    stroke: #ffe24d;
+}
+/* Section: How it Works */
 .how-it-works {
     transition: all .23s ease-in;
 }
-
-.cont-desc {
-    /* padding-inline: 18rem; */
-    max-width: 720px;
+.how-it-works .col {
+    z-index: 5;
+}
+.how-it-works .col img {
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
+/* Section FAQ */
 img.faq-img {
     max-width: 100%;
     max-height: 480px;
     object-fit: scale-down;
 }
 
-.footer {
-    background-color: #525252 !important;
+/* Section Footer */
+.footer .bottom-links a {
+    margin-left: 25px;
+    position: relative;
 }
-
-.copyright {
-    background-color: #000;
-}
-
-.footer-links a:hover {
-    color: yellow;
-}
-ul.footer-links {
-    // This is important because has 'ul & ol' have padding left 2rem in bootstrap;
-    padding-left: unset !important;
-}
-.footer-links li {
-    margin-bottom: 10px;
-}
-
-/* Contact Page */
-.contact-container {
-    background-color: #bfbfbf;
-}
-
-.contact-image-block {
-    border-radius: 50% 0 0 45%;
-    background-color: wheat;
-}
-
-.contact-img {
-    max-width: 100%;
+.footer .bottom-links a:not(:last-child)::after {
+    content: '';
     height: 100%;
-    max-height: 240px;
-    object-fit: contain;
+    width: 2.2px;
+    background: grey;
+    position: absolute;
+    right: -15px;
+    top: 2px;
 }

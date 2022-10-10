@@ -10,21 +10,16 @@ $(function () {
             live:         true        // default
         }
     ).init();
-    // lax.init()
-
-    // // Add a driver that we use to control our animations
-    // lax.addDriver('scrollY', function () {
-    //   return window.scrollY
-    // })
-
-    // // Add animation bindings to elements
-    // lax.addElements('.selector', {
-    //   scrollY: {
-    //     translateX: [
-    //       ["elInY", "elCenterY", "elOutY"],
-    //       [0, 'screenWidth/2', 'screenWidth'],
-    //     ]
-    //   }
-    // })
     
+    typingMain();
 });
+
+function typingMain() {
+    let type = new Typed(
+        "#typed", {
+            strings:["Battle Arena"],
+            typeSpeed:220,
+            showCursor:true,
+        },
+    );
+}
