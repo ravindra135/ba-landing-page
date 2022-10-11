@@ -331,3 +331,9 @@ section.footer {
     right: -15px;
     top: 1.4px;
 }
+
+@media screen and (max-width: 1000px) {
+    section#features .card {
+        margin-bottom: 8px;
+    }
+}
