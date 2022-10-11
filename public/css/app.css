@@ -3,6 +3,8 @@
 --ff-nabla: 'Nabla', cursive;
 --ff-nunito: 'Nunito', sans-serif;
 --ff-robotoSlab: 'Roboto Slab', serif;
+--base-color: #ffe24d;
+--bg-color: #525252;
 }
 * {
     margin: 0;
@@ -11,14 +13,12 @@
     /* border: 1px solid green; */
 }
 
-/*
-$font-nabla: 'Nabla', cursive;
-$font-nunito: 'Nunito', sans-serif;
-$font-robotoSlab: 'Nunito', sans-serif;
-*/
+.debug {
+    border: 1px solid green;
+}
 
 .navbar {
-    background: #525252;
+    background: var(--bg-color);
 }
 
 a {
@@ -29,10 +29,10 @@ a {
 }
 
 a.nav-link.active {
-    color: #ffe24d !important;   
+    color: var(--base-color) !important;   
 }
 a.nav-link:hover {
-    color: #ffe24d;
+    color: var(--base-color);
 }
 a.nav-link.active::before {
     content: '';
@@ -40,13 +40,14 @@ a.nav-link.active::before {
     height: 10px;
     border-radius: 50%;
     position: absolute;
-    background-color: #ffe24d;
+    background-color: var(--base-color);
     bottom: -5px;
     right: 45%;
 
 }
 .ff-nabla {
     font-family: 'Nabla', cursive;
+    color: white;
 }
 .ff-nunito {
     font-family: 'Nunito', sans-serif;
@@ -91,6 +92,23 @@ section .container .col {
     font-family: var(--ff-robotoSlab);
     position: relative;
 }
+.cont-head:before {
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 100%;
+    background: red;
+    margin-inline-start: -15px;
+}
+
+.cont-head:after {
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 100%;
+    background: red;
+    margin-inline-start: 10px;
+}
 .cont-desc {
     /* padding-inline: 18rem; */
     font-family: var(--ff-nunito);
@@ -111,7 +129,7 @@ li.nav-item:hover::after {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: #ffe24d;
+    background: var(--base-color);
     position: absolute;
     border: 5px solid transparent;
     bottom: -5px;
@@ -140,7 +158,9 @@ section#hero{
 span#typed_head{
     font-size: 1.7rem;
 }
-
+h2#typed {
+    font-size: 5em;
+}
 .image-block, .text-block {z-index: 2;}
 
 .element-one {
@@ -159,7 +179,7 @@ span#typed_head{
     position: absolute;
     width: 90px;
     height: 90px;
-    background: #ffe24d;
+    background: var(--base-color);
     top: 2.7%;
     left: 2rem;
     border-radius: 50%;
@@ -236,8 +256,8 @@ span#typed_head{
     color: #000 !important;
 }
 .card:hover svg {
-    fill: #ffe24d;
-    stroke: #ffe24d;
+    fill: var(--base-color);
+    stroke: var(--base-color);
 }
 
 /* Section: Gather Your Squad */
@@ -262,6 +282,14 @@ section#refer_a_friend .img-container img {
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
+.how-text-block h2 {
+    font-family: var(--ff-robotoSlab);
+    font-weight: 600;
+}
+
+.how-text-block p {
+    font-family: var(--ff-nunito);
+}
 /* Section FAQ */
 img.faq-img {
     max-width: 100%;
@@ -277,6 +305,8 @@ img.faq-img {
 .footer .bottom-links a:not(:last-child)::after {
     content: '';
     height: 100%;
+    min-height: 22px;
+    max-height: 32px;
     width: 2.2px;
     background: grey;
     position: absolute;
