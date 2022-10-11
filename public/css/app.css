@@ -31,8 +31,9 @@ a {
 a.nav-link.active {
     color: var(--base-color) !important;   
 }
+.bottom-links a:hover,
 a.nav-link:hover {
-    color: var(--base-color);
+    color: var(--base-color) !important;
 }
 a.nav-link.active::before {
     content: '';
@@ -60,10 +61,6 @@ a.nav-link.active::before {
     font-size: 6rem;
 }
 
-.card {
-    width: 18rem;
-}
-
 .col-h {
     height: 100%;
     max-height: 400px;
@@ -86,6 +83,9 @@ ul {
     z-index: 1;
     max-width: 100%;
     object-fit: contain;
+}
+section.bg-color {
+    background: #fafafa !important;
 }
 section .container .col {
     z-index: 5;
@@ -112,9 +112,9 @@ section .container .col {
     margin-inline-start: 10px;
 }
 .cont-desc {
-    /* padding-inline: 18rem; */
     font-family: var(--ff-nunito);
     max-width: 720px;
+    margin-top: 8px;
 }
 
 /* Section Header */
@@ -241,28 +241,40 @@ h2#typed {
 .item-6 {top: 18%; left: 48%;}
 .item-7 {top: 35%; left: 15%;}
 
-
-/* Section: Cards */
-.card h4.text-muted {
+/* Section Features */
+section#features .card {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between !important;
+}
+.card .card-img {
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card .card-img svg {
+    max-width: 42px;
+}
+.card .card-text h3 {
     font-family: var(--ff-robotoSlab);
-    font-weight: 700;
+    font-weight: 600;
 }
-.card:hover {
-    background-color: rgb(248, 249, 250);
-    transition: all .35s ease-in-out;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    scale: 1.05;
+.card .card-text p {
+    font-family: var(--ff-nunito);
 }
-.card:hover h4.text-muted {
-    color: #000 !important;
-}
-.card:hover svg {
-    fill: var(--base-color);
-    stroke: var(--base-color);
-}
-
+hr.sep-2 {
+    border: 0; 
+    height: 3px;
+    margin-top: 3rem;
+    margin-bottom: 3rem; 
+    background-image: linear-gradient(to right, #f0f0f0, #ff2d2d, #fee120, #f0f0f0);
+  }
 /* Section: Gather Your Squad */
-
 section#refer_a_friend img.bg-img {
     bottom: 0;
     opacity: .15;
@@ -299,6 +311,10 @@ img.faq-img {
 }
 
 /* Section Footer */
+section.footer {
+    background: var(--bg-color);
+    /* background: rgb(238, 136, 136); */
+}
 .footer .bottom-links a {
     margin-left: 25px;
     position: relative;
@@ -310,8 +326,8 @@ img.faq-img {
     min-height: 22px;
     max-height: 32px;
     width: 2.2px;
-    background: rgb(219, 219, 219);
+    background: red;
     position: absolute;
     right: -15px;
-    top: 2px;
+    top: 1.4px;
 }
