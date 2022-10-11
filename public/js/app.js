@@ -17,9 +17,12 @@ $(function () {
 function typingMain() {
     let type = new Typed(
         "#typed", {
-            strings:["Battle Arena"],
+            strings:["Battle Arena."],
             typeSpeed:220,
             showCursor:true,
+            cursorChar: '|',
+            autoInsertCss: true,
+            startDelay:500,
         },
     );
 }
