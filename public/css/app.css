@@ -250,6 +250,12 @@ section#features .card {
     flex-direction: row !important;
     align-items: center;
     justify-content: space-between !important;
+    cursor: pointer;
+}
+section#features .card:hover {
+    transition: all .23s ease-in-out;
+    border-color: var(--base-color) !important;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .card .card-img {
     width: 60px;
