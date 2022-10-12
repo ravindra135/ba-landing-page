@@ -262,6 +262,7 @@ section#features .card {
 }
 .card .card-img svg {
     max-width: 42px;
+    fill: #fcfcfc;
 }
 .card .card-text h3 {
     font-family: var(--ff-robotoSlab);
