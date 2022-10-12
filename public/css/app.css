@@ -83,6 +83,7 @@ ul {
     z-index: 1;
     max-width: 100%;
     object-fit: contain;
+    filter: blur(.80px);
 }
 section.bg-color {
     background: #fafafa !important;
@@ -137,6 +138,7 @@ li.nav-item:hover::after {
     bottom: -5px;
     right: 45%;
 }
+
 
 /* Section Hero */
 section#hero{
@@ -243,6 +245,7 @@ h2#typed {
 
 /* Section Features */
 section#features .card {
+    background: transparent !important;
     display: flex !important;
     flex-direction: row !important;
     align-items: center;
@@ -274,6 +277,19 @@ hr.sep-2 {
     margin-bottom: 3rem; 
     background-image: linear-gradient(to right, #f0f0f0, #ff2d2d, #fee120, #f0f0f0);
   }
+img#f1.bg-img {
+    top: 15rem;
+}
+img#f3.bg-img {
+    top: 50%;
+}
+img#f4.bg-img {
+    top: 35%;
+}
+img#f6.bg-img {
+    bottom: 8rem;
+}
+  
 /* Section: Gather Your Squad */
 section#refer_a_friend img.bg-img {
     bottom: 0;
@@ -335,5 +351,9 @@ section.footer {
 @media screen and (max-width: 1000px) {
     section#features .card {
         margin-bottom: 8px;
+    }
+    
+    img.bg-img {
+        filter: blur(1.8px);
     }
 }
